@@ -141,9 +141,10 @@ Three channels are compared:
 \end{equation}
 This is a unital channel that preserves populations and suppresses coherences.
 
-\paragraph{Full-cascade amplitude damping.}
-Models energy decay $\ket{2}\to\ket{1}\to\ket{0}$ with equal decay probability
-$p$ per level.
+\paragraph{Binomial full-cascade amplitude damping.}
+Models energy decay $\ket{2}\to\ket{1}\to\ket{0}$ as a binomial loss process:
+each excitation is lost independently with probability $p$, so the populations
+after the channel follow $P_k = \binom{2}{2-k}p^{2-k}(1-p)^k$ for $k=0,1,2$.
 The Kraus operators are
 \begin{align}
   K_0 &= \mathrm{diag}(1,\,\sqrt{1-p},\,(1-p)), \notag \\
@@ -299,7 +300,7 @@ the optimal state, and it has a direct experimental implication: an experiment
 that prepares $\ket{2}$ and applies dephasing noise will not see any degradation
 of the KCBS witness due to that noise alone.
 
-\paragraph{Noise model caveat.}
+\paragraph{Noise model.}
 All results here model noise as acting on the quantum state before measurement
 (Schr\"{o}dinger picture, state noise).
 This is physically distinct from noise acting between sequential measurements,
@@ -325,8 +326,9 @@ depends sensitively on the physical realization of the qutrit.
 
 We have derived analytic expressions for the KCBS witness under dephasing and
 full-cascade amplitude damping on a spin-1 qutrit.
-The dephasing result is a lemma: the KCBS-optimal state is immune to dephasing
-because it carries no coherences.
+The dephasing result is a lemma: the KCBS-optimal state $\ket{2}\bra{2}$ is
+immune to standard-basis dephasing because it carries no coherences; other
+initial states or measurement arrangements would generally be affected.
 The amplitude damping result is the main contribution: a closed-form $\K(p)$
 and threshold $\pstar_{\mathrm{AD}} \approx 0.149$, derived from the binomial
 cascade structure of the Kraus operators and the five-fold symmetry of the KCBS
