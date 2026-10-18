@@ -28,7 +28,7 @@ for contextuality — the distinction must be explicit in any paper.
 
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate          # Windows: .venv\Scripts\Activate.ps1
+source .venv/bin/activate         
 pip install -r requirements.txt
 ```
 
